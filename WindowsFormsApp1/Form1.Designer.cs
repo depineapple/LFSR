@@ -28,66 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Encrypt = new System.Windows.Forms.Button();
+            this.Decrypt = new System.Windows.Forms.Button();
+            this.textBoxMessage = new System.Windows.Forms.TextBox();
+            this.textBoxСoefficientVector = new System.Windows.Forms.TextBox();
+            this.textBoxInitializationVector = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxKeyStream = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.textBoxCipherText = new System.Windows.Forms.TextBox();
+            this.Clear = new System.Windows.Forms.Button();
+            this.stringSequence = new System.Windows.Forms.RadioButton();
+            this.bitSequence = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
-            // button1
+            // Encrypt
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(284, 120);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 31);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Зашифровать";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Encrypt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Encrypt.Location = new System.Drawing.Point(284, 120);
+            this.Encrypt.Name = "Encrypt";
+            this.Encrypt.Size = new System.Drawing.Size(144, 31);
+            this.Encrypt.TabIndex = 1;
+            this.Encrypt.Text = "Зашифровать";
+            this.Encrypt.UseVisualStyleBackColor = true;
+            this.Encrypt.Click += new System.EventHandler(this.Encrypt_Click);
             // 
-            // button2
+            // Decrypt
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(284, 168);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 31);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Расшифровать";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Decrypt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Decrypt.Location = new System.Drawing.Point(284, 168);
+            this.Decrypt.Name = "Decrypt";
+            this.Decrypt.Size = new System.Drawing.Size(144, 31);
+            this.Decrypt.TabIndex = 2;
+            this.Decrypt.Text = "Расшифровать";
+            this.Decrypt.UseVisualStyleBackColor = true;
+            this.Decrypt.Click += new System.EventHandler(this.Decrypt_Click);
             // 
-            // textBox1
+            // textBoxMessage
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(12, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(201, 26);
-            this.textBox1.TabIndex = 5;
+            this.textBoxMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxMessage.Location = new System.Drawing.Point(12, 28);
+            this.textBoxMessage.Name = "textBoxMessage";
+            this.textBoxMessage.Size = new System.Drawing.Size(201, 26);
+            this.textBoxMessage.TabIndex = 5;
             // 
-            // textBox2
+            // textBoxСoefficientVector
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(12, 80);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(201, 26);
-            this.textBox2.TabIndex = 6;
+            this.textBoxСoefficientVector.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxСoefficientVector.Location = new System.Drawing.Point(12, 80);
+            this.textBoxСoefficientVector.Name = "textBoxСoefficientVector";
+            this.textBoxСoefficientVector.Size = new System.Drawing.Size(201, 26);
+            this.textBoxСoefficientVector.TabIndex = 6;
             // 
-            // textBox3
+            // textBoxInitializationVector
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(12, 133);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(201, 26);
-            this.textBox3.TabIndex = 7;
+            this.textBoxInitializationVector.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxInitializationVector.Location = new System.Drawing.Point(12, 133);
+            this.textBoxInitializationVector.Name = "textBoxInitializationVector";
+            this.textBoxInitializationVector.Size = new System.Drawing.Size(201, 26);
+            this.textBoxInitializationVector.TabIndex = 7;
             // 
             // label1
             // 
@@ -129,13 +131,13 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Ключевой поток";
             // 
-            // textBox4
+            // textBoxKeyStream
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(12, 184);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(201, 26);
-            this.textBox4.TabIndex = 11;
+            this.textBoxKeyStream.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxKeyStream.Location = new System.Drawing.Point(12, 184);
+            this.textBoxKeyStream.Name = "textBoxKeyStream";
+            this.textBoxKeyStream.Size = new System.Drawing.Size(201, 26);
+            this.textBoxKeyStream.TabIndex = 11;
             // 
             // label5
             // 
@@ -147,69 +149,70 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Шифротекст";
             // 
-            // textBox5
+            // textBoxCipherText
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(12, 236);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(201, 26);
-            this.textBox5.TabIndex = 13;
+            this.textBoxCipherText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxCipherText.Location = new System.Drawing.Point(12, 236);
+            this.textBoxCipherText.Name = "textBoxCipherText";
+            this.textBoxCipherText.Size = new System.Drawing.Size(201, 26);
+            this.textBoxCipherText.TabIndex = 13;
             // 
-            // button3
+            // Clear
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(284, 222);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 31);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Очистка";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Clear.Location = new System.Drawing.Point(284, 222);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(144, 31);
+            this.Clear.TabIndex = 15;
+            this.Clear.Text = "Очистка";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
-            // radioButton1
+            // stringSequence
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton1.Location = new System.Drawing.Point(238, 52);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(277, 24);
-            this.radioButton1.TabIndex = 16;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Строковая последовательность";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.stringSequence.AutoSize = true;
+            this.stringSequence.Checked = true;
+            this.stringSequence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.stringSequence.Location = new System.Drawing.Point(238, 52);
+            this.stringSequence.Name = "stringSequence";
+            this.stringSequence.Size = new System.Drawing.Size(277, 24);
+            this.stringSequence.TabIndex = 16;
+            this.stringSequence.TabStop = true;
+            this.stringSequence.Text = "Строковая последовательность";
+            this.stringSequence.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // bitSequence
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton2.Location = new System.Drawing.Point(238, 75);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(260, 24);
-            this.radioButton2.TabIndex = 17;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Битовая последовательность";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.bitSequence.AutoSize = true;
+            this.bitSequence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bitSequence.Location = new System.Drawing.Point(238, 75);
+            this.bitSequence.Name = "bitSequence";
+            this.bitSequence.Size = new System.Drawing.Size(260, 24);
+            this.bitSequence.TabIndex = 17;
+            this.bitSequence.TabStop = true;
+            this.bitSequence.Text = "Битовая последовательность";
+            this.bitSequence.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(509, 293);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.bitSequence);
+            this.Controls.Add(this.stringSequence);
+            this.Controls.Add(this.Clear);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxCipherText);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxKeyStream);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBoxInitializationVector);
+            this.Controls.Add(this.textBoxСoefficientVector);
+            this.Controls.Add(this.textBoxMessage);
+            this.Controls.Add(this.Decrypt);
+            this.Controls.Add(this.Encrypt);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -219,21 +222,21 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button Encrypt;
+        private System.Windows.Forms.Button Decrypt;
+        private System.Windows.Forms.TextBox textBoxMessage;
+        private System.Windows.Forms.TextBox textBoxСoefficientVector;
+        private System.Windows.Forms.TextBox textBoxInitializationVector;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxKeyStream;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.TextBox textBoxCipherText;
+        private System.Windows.Forms.Button Clear;
+        private System.Windows.Forms.RadioButton stringSequence;
+        private System.Windows.Forms.RadioButton bitSequence;
     }
 }
 
